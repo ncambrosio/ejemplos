@@ -1,15 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>noeca.projects</groupId>
-  <artifactId>prototipo1</artifactId>
+  <artifactId>ejemploConfigXml</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
    
    <name>Prototipo de proyecto Spring MVC</name>
-   <description>
-Spring 4 MVC
-AngularJS
-   </description>
+   <description>Spring 4 MVC + AngularJS</description>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -57,12 +54,12 @@ AngularJS
 				<version>2.4</version>
 				<configuration>
 					<warSourceDirectory>src/main/webapp</warSourceDirectory>
-					<warName>PrototipoUno</warName>
+					<warName>ejemploConfigXml</warName>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>PrototipoUno</finalName>
+		<finalName>ejemploConfigXml</finalName>
 	</build>
 	
 </project>
