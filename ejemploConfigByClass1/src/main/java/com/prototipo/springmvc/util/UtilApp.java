@@ -8,13 +8,13 @@ public class UtilApp {
 		System.out.println("Invocado init method!!!");
 	}
 	
-	private HashMap<String, String> relaciones = new HashMap<String, String>();
+	private HashMap<String, String> defaultPages = new HashMap<String, String>();
 
-	public HashMap<String, String> getRelaciones() {
-		return relaciones;
+	public HashMap<String, String> getDefaultPages() {
+		return defaultPages;
 	}
 
-	public void setRelaciones(HashMap<String, String> relaciones) {
-		this.relaciones = relaciones;
+	public void setDefaultPages(HashMap<String, String> defaultPages) {
+		this.defaultPages = defaultPages;
 	}
 }

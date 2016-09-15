@@ -6,11 +6,20 @@
 		http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.0.xsd">
 	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="WEB-INF/application.properties" />
+	</bean>
+	
 	<bean name="UtilApp" class="com.prototipo.springmvc.util.UtilApp" init-method="init">	
-		<property name="relaciones">
+		<property name="defaultPages">
 			<map>
-				<entry key="opcion1" value="balblabla"/>
+				<entry key="main" value="welcome"/>
 			</map>
 		</property>
 	</bean>
+	
+	<bean name="mainPage" class="java.lang.String">
+	    <constructor-arg type="java.lang.String" value="welcome" />
+	</bean>
+	
 </beans>
