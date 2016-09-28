@@ -6,9 +6,20 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   </head>
   <body>
-		<div class="generic-container">
-      		<h1>Bienvenido!!!!</h1>
-		</div>
+  <h1>Post session page</h1>
+      <div class="generic-container">
+		<h3>Atributos de la request</h3>
+		<%
+			java.util.Enumeration<String> reqEnum = request.getAttributeNames();
+			while (reqEnum.hasMoreElements()) {
+				String s = reqEnum.nextElement();
+				if (s.compareToIgnoreCase("myUserSession") == 0) {
+					out.println(s + " == " + request.getAttribute(s));
+				}
+			}
+		%>
+      </div>
+      <h3>Atributos de la sesión</h3>
 		<div>
 		<%
 		  java.util.Enumeration<String> sessEnum = request.getSession().getAttributeNames();

@@ -1,5 +1,9 @@
 package com.prototipo.springmvc.config;
 
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpSessionListener;
+
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
  
 public class MainInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
@@ -19,4 +23,11 @@ public class MainInitializer extends AbstractAnnotationConfigDispatcherServletIn
         return new String[] { "/" };
     }
  
+    @Override
+    public void onStartup(ServletContext servletContext) throws ServletException {
+    	
+    	super.onStartup(servletContext);
+    	
+    	servletContext.addListener(MainSessionListener.class);
+    }
 }
